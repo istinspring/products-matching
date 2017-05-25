@@ -3,6 +3,43 @@ product matching
 
 matching similar products across the distibutors
 
+Working with database of `1'561'159` products to match product properties into
+the more general categories.
+
+Drop me message if you want to get raw dataset (**all sensitive data removed**).
+
+List of all keys:
+
+```json
+{ "_id" : "_id", "value" : null }
+{ "_id" : "brand", "value" : null }
+{ "_id" : "category", "value" : null }
+{ "_id" : "code", "value" : null }
+{ "_id" : "color", "value" : null }
+{ "_id" : "size", "value" : null }
+{ "_id" : "source", "value" : null }
+{ "_id" : "title", "value" : null }
+```
+
+Example of the record:
+
+
+```json
+{
+        "_id" : ObjectId("55fedbc4c702283c66877c14"),
+        "code" : "A4N3234",
+        "title" : "MARATHON T",
+        "color" : "FOREST",
+        "source" : "shemeka",
+        "size" : "L",
+        "category" : "performance",
+        "brand" : "a4"
+}
+```
+
+NOTE: `source` original distributor name replaced with alias.
+
+
 Project Organization
 ------------
 

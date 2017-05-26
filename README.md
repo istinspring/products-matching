@@ -1,12 +1,19 @@
-product matching
-==============================
+# Reproducible Data Analysis: real world products database
 
-matching similar products across the distibutors
+Goals:
 
-Working with database of `1'561'159` products to match product properties into
-the more general categories.
+- [ ] map similar sizes into the general size (XXL -> 2XL etc.)
+- [ ] map colors into the groups (LIGHT GREEN -> GREEN)
+- [ ] clean brands
+- [ ] map categories
+- [ ] extract features from title
+- [ ] map codes
+- [ ] find similar products
+- [ ] group similar products with equal properties across the distibutors.
 
-Drop me message if you want to get raw dataset (**all sensitive data removed**).
+Working with dataset of `1'561'159` products.
+
+Drop me a message if you want to get raw dataset (**all sensitive data removed**).
 
 List of all keys:
 
@@ -23,8 +30,7 @@ List of all keys:
 
 Example of the record:
 
-
-```json
+```javascript
 {
         "_id" : ObjectId("55fedbc4c702283c66877c14"),
         "code" : "A4N3234",
@@ -35,6 +41,23 @@ Example of the record:
         "category" : "performance",
         "brand" : "a4"
 }
+```
+
+Import dataset into the database (mongodb):
+
+```bash
+mongoimport -d <database_name> -c data --file=products.json
+```
+
+Create indexes (in mongodb console ```mongo <database_name>```):
+
+```javascript
+db.data.createIndex({code: 1})
+db.data.createIndex({color: 1});
+db.data.createIndex({size: 1});
+db.data.createIndex({source: 1});
+db.data.createIndex({brand: 1});
+db.data.createIndex({category: 1});
 ```
 
 NOTE: `source` original distributor name replaced with alias.

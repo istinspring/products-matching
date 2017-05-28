@@ -9,6 +9,7 @@ python-dotenv>=0.5.1
 # project
 pymongo
 tabulate
+ipython
 plotly
 matplotly
 
@@ -17,3 +18,4 @@ numpy
 pandas
 scipy
 scikit-learn
+tensorflow

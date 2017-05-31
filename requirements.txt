@@ -8,10 +8,13 @@ python-dotenv>=0.5.1
 
 # project
 pymongo
+
+# additional
+jupyter
 tabulate
 ipython
 plotly
-matplotly
+matplotlib
 
 # science
 numpy
